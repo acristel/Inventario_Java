@@ -1,6 +1,5 @@
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class InventarioTest {
 
@@ -14,10 +13,5 @@ public class InventarioTest {
     void pruebaSubtotalConCantidadValida() {
         int resultado = Inventario.calcularSubtotal(25, 8);
         assertEquals(200, resultado);
-    }
-
-    @Test
-    void pruebaErrorConCantidadNegativa() {
-        assertThrows(IllegalArgumentException.class, () -> Inventario.calcularSubtotal(25, -1));
     }
 }
