@@ -7,7 +7,9 @@ public class Inventario {
     }
 
     public static int calcularSubtotal(int precio, int cantidad) {
+        if (precio < 0 || cantidad < 0) {
+            throw new IllegalArgumentException("El precio y la cantidad no pueden ser negativos");
+        }
         return precio * cantidad;
     }
 }
-
