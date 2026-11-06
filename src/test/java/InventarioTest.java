@@ -14,4 +14,10 @@ public class InventarioTest {
         int resultado = Inventario.calcularSubtotal(25, 8);
         assertEquals(200, resultado);
     }
+
+    @Test
+    void pruebaSubtotalFallaIntencionalmente() {
+        int resultado = Inventario.calcularSubtotal(50, 4);
+        assertEquals(201, resultado);
+    }
 }
